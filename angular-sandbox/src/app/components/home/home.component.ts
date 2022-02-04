@@ -4,7 +4,7 @@ import { Router } from "@angular/router";
 import { interval, Observable, Subject, combineLatest } from "rxjs";
 import { tap, takeWhile, takeUntil, switchMap, map } from "rxjs/operators";
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { LOADING_STENCIL_ROUTES_URLS } from "src/app/loading-stencil/loading-stencil.constants";
+import { LOADING_STENCIL_ROUTES_URLS } from "src/app/common/loading-stencil/loading-stencil.constants";
 
 enum TimerResult {
   COMPLETE,

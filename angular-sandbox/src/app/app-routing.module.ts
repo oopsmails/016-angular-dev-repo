@@ -1,8 +1,8 @@
 //app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ItemListComponent } from './sandbox/item-list/item-list.component';
+import { HomeComponent } from './components/home/home.component';
+import { ItemListComponent } from './components/sandbox/item-list/item-list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
