@@ -12,6 +12,8 @@ import { TranslationTestComponent } from './components/example/translation-test/
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ItemListComponent } from './components/sandbox/item-list/item-list.component';
 import { HomeComponent } from './components/home/home.component';
+import { ExampleHomeComponent } from './components/example/example-home.component';
+import { ListSearchComponent } from './components/example/list-search/list-search.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -24,6 +26,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ChildComponent,
     NavbarFixedComponent,
     HomeComponent,
+    ExampleHomeComponent,
+    ListSearchComponent,
     ItemListComponent,
     TranslationTestComponent
   ],

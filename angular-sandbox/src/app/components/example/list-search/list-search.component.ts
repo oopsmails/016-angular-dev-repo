@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie.model';
 
 @Component({
-  selector: 'app-loading-simple',
-  templateUrl: './loading-simple.component.html',
-  styleUrls: ['./loading-simple.component.scss']
+  selector: 'list-search',
+  templateUrl: './list-search.component.html',
+  styleUrls: ['./list-search.component.scss']
 })
-export class LoadingSimpleComponent implements OnInit {
+export class ListSearchComponent implements OnInit {
 
   constructor(private httpClient: HttpClient) { }
   movies: Array<Movie> = [];

@@ -1,10 +1,9 @@
-import { stringify } from "@angular/compiler/src/util";
-import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
-import { interval, Observable, Subject, combineLatest } from "rxjs";
-import { tap, takeWhile, takeUntil, switchMap, map } from "rxjs/operators";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { LOADING_STENCIL_ROUTES_URLS } from "src/app/common/loading-stencil/loading-stencil.constants";
+import { combineLatest, interval, Observable, Subject } from 'rxjs';
+import { takeUntil, tap } from 'rxjs/operators';
+import { LOADING_STENCIL_ROUTES_URLS } from 'src/app/common/loading-stencil/loading-stencil.constants';
 
 enum TimerResult {
   COMPLETE,
