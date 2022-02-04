@@ -11,7 +11,7 @@ import { LoadingStencilModule } from './loading-stencil/loading-stencil.module';
 import { TranslationTestComponent } from './translation-test/translation-test.component';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ItemListComponent } from './sandbox/item-list/item-list.component';
-import { HomeComponent } from './core/home/home.component';
+import { HomeComponent } from './home/home.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
