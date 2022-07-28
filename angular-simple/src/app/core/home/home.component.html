@@ -9,6 +9,27 @@
         but overriden in <span class="spanFileBackground">home.component.scss</span>.
     </p>
 
+    <div class="container mt-5">
+
+        <h2>Angular Display Browser Name and Version Example</h2>
+
+        <table class="table table-striped mt-5">
+            <thead>
+                <tr>
+                    <th>Browser Name</th>
+                    <th>Browser Version</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ browserName | titlecase }}</td>
+                    <td>{{ browserVersion | titlecase }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <br>
     <div class="container text-center mt-5">
         <h2>Angular Detect Width and Height of Screen</h2>
         <p>Window width: <strong>{{ getScreenWidth }}</strong></p>
