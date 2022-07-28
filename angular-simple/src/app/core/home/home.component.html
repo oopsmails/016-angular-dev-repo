@@ -1,12 +1,7 @@
 <div class="mainContainer">
-    <p>
+    <h1>
         We are in <span class="spanFileBackground">angular-simple</span> ....
-    </p>
-
-    <div class="container text-center mt-5">
-        <p>Window width: <strong>{{ getScreenWidth }}</strong></p>
-        <p>Window height: <strong>{{ getScreenHeight }}</strong></p>
-    </div>
+    </h1>
 
     <p>
         This is in 'div class="mainContainer"''. It is defined in
@@ -14,26 +9,55 @@
         but overriden in <span class="spanFileBackground">home.component.scss</span>.
     </p>
 
-    <p>
-        {{result}}
-    </p>
-    <button (click)="start()">start</button>
-    <button (click)="end()">end</button>
-
+    <div class="container text-center mt-5">
+        <h2>Angular Detect Width and Height of Screen</h2>
+        <p>Window width: <strong>{{ getScreenWidth }}</strong></p>
+        <p>Window height: <strong>{{ getScreenHeight }}</strong></p>
+    </div>
+    <br>
+    <br>
     <div>
+        <h2>Angular Show/Hide Div on Radio Button Click</h2>
+        <label>
+            <input [value]="1" [(ngModel)]="showHide" name="showHide" type="radio" [checked]="isChecked" /> Adams
+        </label>
+        <label>
+            <input [value]="0" [(ngModel)]="showHide" name="showHide" type="radio" [checked]="!isChecked" /> Johnas
+        </label>
+        <div class="text-center purple" *ngIf="showHide == 1">Adams</div>
+        <div class="text-center red" *ngIf="showHide == 0">Johnas</div>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h2>Angular Timer</h2>
+        <p>
+            {{result}}
+        </p>
+        <button (click)="start()">start</button>
+        <button (click)="end()">end</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <h2>Angular fa-icon</h2>
         <fa-icon [icon]="faCoffee"></fa-icon>
     </div>
-
-    <p>
-        <span><b>Value emitted from child component is to Parent:</b></span>
+    <br>
+    <br>
+    <div>
+        <h2>Angular value emitted from child component is to Parent:</h2>
 
         {{ valueEmittedFromChildComponent }}
 
         <app-child (buttonClicked)="parentEventHandlerFunction($event)">
         </app-child>
-    </p>
-
+    </div>
+    <br>
+    <br>
     <button (click)="navToPage(navRoutes.LOADING_STENCIL_ROUTES_ROOT_SIMPLE)">Test Loading</button>
 
+    <br>
+    <br>
     <a routerLink="">routerLink home</a>
 </div>

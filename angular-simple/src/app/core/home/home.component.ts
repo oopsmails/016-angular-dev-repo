@@ -27,6 +27,8 @@ export class HomeComponent implements OnInit {
   simpleTimer$ = interval(100);
   _notifier: Subject<TimerResult> = new Subject();
   notifier$: Observable<TimerResult> = this._notifier.asObservable();
+  showHide;
+  isChecked;
 
   public getScreenWidth: any;
   public getScreenHeight: any;
