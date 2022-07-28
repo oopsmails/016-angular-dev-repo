@@ -103,4 +103,11 @@ Instead, specify your spec file in the context:
 const context = require.context('./', true, /\/app\/user\/user\.component\.spec\.ts$/);
 
 
+## Detect Width and Height of Screen
+
+- Ref:
+
+https://www.positronx.io/angular-detect-width-and-height-of-screen-tutorial/
+
+
 

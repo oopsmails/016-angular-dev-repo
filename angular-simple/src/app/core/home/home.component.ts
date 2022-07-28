@@ -1,5 +1,5 @@
 import { stringify } from "@angular/compiler/src/util";
-import { Component, OnInit } from "@angular/core";
+import { Component, HostListener, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { interval, Observable, Subject, combineLatest } from "rxjs";
 import { tap, takeWhile, takeUntil, switchMap, map } from "rxjs/operators";
@@ -28,6 +28,9 @@ export class HomeComponent implements OnInit {
   _notifier: Subject<TimerResult> = new Subject();
   notifier$: Observable<TimerResult> = this._notifier.asObservable();
 
+  public getScreenWidth: any;
+  public getScreenHeight: any;
+
   navRoutes: any = null;
 
   faCoffee = faCoffee;
@@ -39,6 +42,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     console.log('########### in HomeComponent, TRANSLATIONS_FR = \n' + JSON.stringify(TRANSLATIONS_FR));
     this.navRoutes = LOADING_STENCIL_ROUTES_URLS;
+
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
   }
 
   navToPage(page) {
@@ -68,6 +74,12 @@ export class HomeComponent implements OnInit {
   
   parentEventHandlerFunction(valueEmitted) {
     this.valueEmittedFromChildComponent = valueEmitted;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
   }
 
 }
