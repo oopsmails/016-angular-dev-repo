@@ -14,6 +14,13 @@ import { ItemListComponent } from './components/sandbox/item-list/item-list.comp
 import { HomeComponent } from './components/home/home.component';
 import { ExampleHomeComponent } from './components/example/example-home.component';
 import { ListSearchComponent } from './components/example/list-search/list-search.component';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AppMaterialModule } from './app.material.module';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -33,12 +40,23 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
 
     LoadingStencilModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // MatSortModule,
+    // MatTableModule,
+    // NoopAnimationsModule
+
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
